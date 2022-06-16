@@ -1,2 +1,2 @@
-# ts-minecraft-infrastructure
+# Minecraft Infrastructure
 Tetral's Minecraft server infrastructure
