@@ -10,7 +10,7 @@ motd = "&#09add3A Velocity Server"
 
 # What should we display for the maximum number of players? (Velocity does not support a cap
 # on the number of players online.)
-show-max-players = 500
+show-max-players = 100
 
 # Should we authenticate players with Mojang? By default, this is on.
 online-mode = true
@@ -45,7 +45,7 @@ forwarding-secret-file = "forwarding.secret"
 # 
 # If your network runs one modpack consistently, consider using ping-passthrough = "mods"
 # instead for a nicer display in the server list.
-announce-forge = false
+announce-forge = true
 
 # If enabled (default is false) and the proxy is in online mode, Velocity will kick
 # any existing player who is online if a duplicate connection attempt is made.
@@ -73,6 +73,7 @@ enable-player-address-logging = true
 # Configure your servers here. Each key represents the server's name, and the value
 # represents the IP address of the server to connect to.
 hub = "hub:25565"
+yoahtl-creative = "192.168.222.98:25565"
 
 
 # In what order we should try servers when a player logs in or is kicked from a server.

@@ -5,7 +5,7 @@ services:
     hostname: yoahtl-creative
     image: itzg/minecraft-server:java17
     ports:
-      - "30067:25565"
+      - "25565:25565"
     environment:
       TYPE: PAPER
       VERSION: 1.18.2
