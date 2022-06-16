@@ -18,4 +18,4 @@ services:
     stdin_open: true
     restart: unless-stopped
     volumes:
-      - ./yoahtl-creative:/data
+      - ./servers/yoahtl-creative:/data

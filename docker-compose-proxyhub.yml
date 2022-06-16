@@ -12,7 +12,7 @@ services:
     ports:
       - "25565:25565"
     volumes:
-      - ./proxy:/server
+      - ./servers/proxy:/server
     environment:
       TYPE: VELOCITY
       VELOCITY_VERSION: latest
@@ -39,6 +39,6 @@ services:
     stdin_open: true
     restart: unless-stopped
     volumes:
-      - ./hub:/data
+      - ./servers/hub:/data
 
   
