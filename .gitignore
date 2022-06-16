@@ -1,0 +1,10 @@
+# Ignore logs
+**/logs
+*.log
+*.log.gz
+
+# Ignore our generated forwarding.secret
+proxy/forwarding.secret
+
+# Ignore the actual velocity jar inside the root dir, this is only for config geration and individual testing
+velocity*.jar

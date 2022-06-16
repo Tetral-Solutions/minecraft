@@ -17,11 +17,10 @@ services:
       JVM_XX_OPTS: -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15
       #BUNGEE_JAR_REVISION: "1"
       REPLACE_ENV_VARIABLES: "true"
-      CFG_MOTD: The Hubworld of Tetral's Minecraft network. Powered by Docker.
+      CFG_MOTD: Welcome to Tetral Solutions, the home of innovation. The only limits, are your imagination.
     ports:
       - "25565:25577"
     volumes:
-      - ./config.yml:/config/config.yml
       - proxy:/server
 
 volumes:
