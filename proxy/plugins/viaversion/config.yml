@@ -51,6 +51,9 @@ velocity-ping-save: true
 # It will fallback to the default option if none found.
 velocity-servers:
   default: 393
+  lobby: 759
+  hub: 759
+  yoahtl-creative: 120
 # 
 # ----------------------------------------------------------#
 #                  GLOBAL PACKET LIMITER                   #

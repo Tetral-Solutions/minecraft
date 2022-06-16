@@ -2,9 +2,27 @@
 **/logs
 *.log
 *.log.gz
+# Ignore cache
+**/cache
+**/usercache.json
+# Ignore libraries
+**/libraries
+# Ignore version binaries
+**/versions
+
+# Ignore the plugins generated inside /hub and /proxy
+# these plugins folders are built from bindmounted volumes, sourced from plugins-common, defined in docker-compose.yml
+#hub/plugins
+#proxy/plugins
+
+# Ignore the server-icon.png inside /hub and /proxy, duplicated file, defined in docker-compose.yml
+hub/server-icon.png
+proxy/server-icon.png
 
 # Ignore any generated forwarding.secret
 **/forwarding.secret
 
-# Ignore the actual velocity jar inside the root dir, this is only for config geration and individual testing
+# Ignore the actual velocity jar inside /proxy or anywhere else, this is only for config geration and individual testing
 velocity*.jar
+# Ignore the actual paper jar inside /hub or anywhere else, this will be downloaded on setup
+paper*.jar
