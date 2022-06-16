@@ -9,7 +9,7 @@ services:
     environment:
       TYPE: PAPER
       VERSION: 1.18.2
-      MEMORY: 7680m
+      MEMORY: 7168m
       USE_AIKAR_FLAGS: true
       EULA: "TRUE"
       EXTRA_ARGS: '--universe ./worlds/'
