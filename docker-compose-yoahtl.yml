@@ -13,7 +13,7 @@ services:
       USE_AIKAR_FLAGS: true
       EULA: "TRUE"
       EXTRA_ARGS: '--universe ./worlds/'
-      EXEC_DIRECTLY: true
+      #EXEC_DIRECTLY: true
     tty: true
     stdin_open: true
     restart: unless-stopped

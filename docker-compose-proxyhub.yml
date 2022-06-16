@@ -34,7 +34,7 @@ services:
       MEMORY: 1024m
       USE_AIKAR_FLAGS: true
       EULA: "TRUE"
-      EXEC_DIRECTLY: true
+      #EXEC_DIRECTLY: true
     tty: true
     stdin_open: true
     restart: unless-stopped
