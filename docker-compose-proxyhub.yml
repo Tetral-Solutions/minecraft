@@ -17,7 +17,7 @@ services:
       TYPE: VELOCITY
       VELOCITY_VERSION: latest
       MEMORY: 512m
-      JVM_XX_OPTS: -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15
+      JVM_XX_OPTS: "-XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15"
       #BUNGEE_JAR_REVISION: "1"
       #REPLACE_ENV_VARIABLES: "true"
     restart: unless-stopped
@@ -32,7 +32,9 @@ services:
       TYPE: PAPER
       VERSION: latest
       MEMORY: 1024m
+      USE_AIKAR_FLAGS: true
       EULA: "TRUE"
+      EXEC_DIRECTLY: true
     tty: true
     stdin_open: true
     restart: unless-stopped
