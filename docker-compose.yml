@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  mc-hub:
+  # For now, we'll be using itzg's preconfigured bungeecord and minecraft server containers just to get everything running
+  # This SHOULD change in the near future when someone has enough time to swap this out
+    image: itzg/minecraft-server
+    environment:
+      EULA: "TRUE"
+      ONLINE_MODE: "FALSE"
+  mc-proxy:
+    image: itzg/bungeecord:java17
+    environment:
+      TYPE: VELOCITY
+      VELOCITY_VERSION: latest
+      MEMORY: 512m
+      JVM_XX_OPTS: -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15
+      #BUNGEE_JAR_REVISION: "1"
+      REPLACE_ENV_VARIABLES: "true"
+      CFG_MOTD: The Hubworld of Tetral's Minecraft network. Powered by Docker.
+    ports:
+      - "25565:25577"
+    volumes:
+      - ./config.yml:/config/config.yml
+      - proxy:/server
+
+volumes:
+  proxy: {}
