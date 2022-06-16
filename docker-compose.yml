@@ -1,13 +1,13 @@
 version: '3.8'
 
 services:
-  mc-hub:
+  #mc-hub:
   # For now, we'll be using itzg's preconfigured bungeecord and minecraft server containers just to get everything running
   # This SHOULD change in the near future when someone has enough time to swap this out
-    image: itzg/minecraft-server
-    environment:
-      EULA: "TRUE"
-      ONLINE_MODE: "FALSE"
+  #  image: itzg/minecraft-server
+  #  environment:
+  #    EULA: "TRUE"
+  #    ONLINE_MODE: "FALSE"
   mc-proxy:
     image: itzg/bungeecord:java17
     environment:
@@ -17,11 +17,8 @@ services:
       JVM_XX_OPTS: -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15
       #BUNGEE_JAR_REVISION: "1"
       REPLACE_ENV_VARIABLES: "true"
-      CFG_MOTD: Welcome to Tetral Solutions, the home of innovation. The only limits, are your imagination.
     ports:
       - "25565:25577"
     volumes:
-      - proxy:/server
-
-volumes:
-  proxy: {}
+      - ./proxy:/server
+      - ./server-icon.png:/server/server-icon.png
