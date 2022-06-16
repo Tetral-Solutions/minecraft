@@ -30,7 +30,7 @@ services:
       - "30066:25565"
     environment:
       TYPE: PAPER
-      PAPER_VERSION: latest
+      VERSION: latest
       MEMORY: 1024m
       EULA: "TRUE"
     tty: true

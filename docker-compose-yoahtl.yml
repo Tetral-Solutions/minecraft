@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  yoahtl-creative:
+    hostname: yoahtl-creative
+    image: itzg/minecraft-server:java17
+    ports:
+      - "30067:25565"
+    environment:
+      TYPE: PAPER
+      VERSION: 1.18.2
+      MEMORY: 7680m
+      EULA: "TRUE"
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    volumes:
+      - ./yoahtl-creative:/data
