@@ -22,7 +22,8 @@ hub/server-icon.png
 proxy/server-icon.png
 
 # Ignore any generated forwarding.secret
-**/forwarding.secret
+# UPDATE: I guess we HAVE to track the secret until we can implement docker secrets??????
+#**/forwarding.secret
 
 # Ignore the actual velocity jar inside /proxy or anywhere else, this is only for config geration and individual testing
 velocity*.jar

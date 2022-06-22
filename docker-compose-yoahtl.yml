@@ -9,6 +9,7 @@ services:
 
   yoahtl-creative:
     hostname: yoahtl-creative
+    container_name: yoahtl-creative
     image: itzg/minecraft-server:java17
     ports:
       - "25565:25565"
