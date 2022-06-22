@@ -1,6 +1,12 @@
 version: '3.8'
 
 services:
+
+  # For now, we'll be using itzg's preconfigured bungeecord and minecraft server containers just to get everything running
+  # https://github.com/itzg/docker-minecraft-server/ 
+  # https://github.com/itzg/docker-bungeecord
+  # This SHOULD change in the future when someone has enough time to swap this out with something assembled from scratch with the orignal Paper and Velocity jars.
+
   yoahtl-creative:
     hostname: yoahtl-creative
     image: itzg/minecraft-server:java17

@@ -91,7 +91,7 @@ proxies:
   velocity:
     enabled: true
     online-mode: true
-    secret: 6v46hHJVS6uuA6KP
+    secret: hwog34b0NzK6
 scoreboards:
   save-empty-scoreboard-teams: false
   track-plugin-scoreboards: false

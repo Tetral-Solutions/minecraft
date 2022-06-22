@@ -6,6 +6,7 @@ services:
   # https://github.com/itzg/docker-minecraft-server/ 
   # https://github.com/itzg/docker-bungeecord
   # This SHOULD change in the future when someone has enough time to swap this out with something assembled from scratch with the orignal Paper and Velocity jars.
+
   proxy:
     hostname: proxy
     container_name: mc-proxy
@@ -31,11 +32,11 @@ services:
     ports:
       - "30066:25565"
     environment:
-      TYPE: LIMBO
-      LIMBO_BUILD: latest
+      TYPE: PAPER
+      VERSION: latest
       MEMORY: 1024m
-      #USE_AIKAR_FLAGS: true
-      #EULA: "TRUE"
+      USE_AIKAR_FLAGS: "TRUE"
+      EULA: "TRUE"
       #EXEC_DIRECTLY: true
     tty: true
     stdin_open: true
