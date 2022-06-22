@@ -8,6 +8,7 @@ services:
   # This SHOULD change in the future when someone has enough time to swap this out with something assembled from scratch with the orignal Paper and Velocity jars.
   proxy:
     hostname: proxy
+    container_name: mc-proxy
     image: itzg/bungeecord:java17
     ports:
       - "25565:25565"
@@ -20,24 +21,25 @@ services:
       JVM_XX_OPTS: "-XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15"
       #BUNGEE_JAR_REVISION: "1"
       #REPLACE_ENV_VARIABLES: "true"
-    restart: unless-stopped
+    restart: always
     links:
       - "hub"
   hub:
     hostname: hub
+    container_name: mc-hub
     image: itzg/minecraft-server:java17
     ports:
       - "30066:25565"
     environment:
-      TYPE: PAPER
-      VERSION: latest
+      TYPE: LIMBO
+      LIMBO_BUILD: latest
       MEMORY: 1024m
-      USE_AIKAR_FLAGS: true
-      EULA: "TRUE"
+      #USE_AIKAR_FLAGS: true
+      #EULA: "TRUE"
       #EXEC_DIRECTLY: true
     tty: true
     stdin_open: true
-    restart: unless-stopped
+    restart: always
     volumes:
       - ./servers/hub:/data
 

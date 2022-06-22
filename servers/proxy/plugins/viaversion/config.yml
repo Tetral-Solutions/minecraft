@@ -53,7 +53,7 @@ velocity-servers:
   default: 393
   lobby: 759
   hub: 759
-  yoahtl-creative: 120
+  yoahtl-creative: 758
 # 
 # ----------------------------------------------------------#
 #                  GLOBAL PACKET LIMITER                   #
