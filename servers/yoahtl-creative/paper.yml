@@ -58,9 +58,9 @@ settings:
   incoming-packet-spam-threshold: 300
   use-alternative-luck-formula: false
   velocity-support:
-    enabled: false
-    online-mode: false
-    secret: ''
+    enabled: true
+    online-mode: true
+    secret: '5MaqtwZ7Q6V8G8q6'
   console-has-all-permissions: false
   suggest-player-names-when-null-tab-completions: true
   watchdog:
