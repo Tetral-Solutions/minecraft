@@ -9,17 +9,16 @@
 **/libraries
 # Ignore version binaries
 **/versions
-# Ignore the world, we'll copy that over manually
-**/world*
+# Ignore the worlds, we'll copy that over manually
+**/worlds
 
 # Ignore the plugins generated inside /hub and /proxy
 # these plugins folders are built from bindmounted volumes, sourced from plugins-common, defined in docker-compose.yml
 #hub/plugins
 #proxy/plugins
 
-# Ignore the server-icon.png inside /hub and /proxy, duplicated file, defined in docker-compose.yml
-hub/server-icon.png
-proxy/server-icon.png
+# Ignore the server-icon.png inside /servers, duplicated file, defined in docker-compose.yml
+servers/**/server-icon.png
 
 # Ignore any generated forwarding.secret
 # UPDATE: I guess we HAVE to track the secret until we can implement docker secrets??????
@@ -29,3 +28,7 @@ proxy/server-icon.png
 velocity*.jar
 # Ignore the actual paper jar inside /hub or anywhere else, this will be downloaded on setup
 paper*.jar
+
+*.console_history
+servers/**/mariadb
+servers/**/schematics

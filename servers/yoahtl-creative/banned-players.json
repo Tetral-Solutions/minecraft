@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "uuid": "e842761c-8f29-4c5d-a9fc-c8b3de4ed0fb",
+    "name": "A_Single_Weeb",
+    "created": "2022-05-30 22:37:22 +0000",
+    "source": "Feathercrown",
+    "expires": "forever",
+    "reason": "Banned by an operator."
+  }
+]

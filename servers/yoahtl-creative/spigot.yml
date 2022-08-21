@@ -163,6 +163,8 @@ world-settings:
       weepingvines-modifier: 100
       cavevines-modifier: 100
       glowberry-modifier: 100
+  worldeditregentempworld:
+    verbose: false
 config-version: 12
 stats:
   disable-saving: false

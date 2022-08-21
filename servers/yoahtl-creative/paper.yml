@@ -60,7 +60,7 @@ settings:
   velocity-support:
     enabled: true
     online-mode: true
-    secret: '5MaqtwZ7Q6V8G8q6'
+    secret: 5MaqtwZ7Q6V8G8q6
   console-has-all-permissions: false
   suggest-player-names-when-null-tab-completions: true
   watchdog:

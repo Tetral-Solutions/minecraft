@@ -1,0 +1,1583 @@
+version: 2
+builds_world#-153#-41#-31:
+  name: Iron Forge
+  blocks:
+    a0builds_world#-153#-41#-31:
+      world: builds_world
+      x: -153
+      y: -41
+      z: -31
+    a1builds_world#-154#-41#-31:
+      world: builds_world
+      x: -154
+      y: -41
+      z: -31
+    a2builds_world#-152#-41#-31:
+      world: builds_world
+      x: -152
+      y: -41
+      z: -31
+  type: FCC
+  health: 0
+  breakTime: 1661062557932
+  runtime: 0
+  selectedRecipe: Cast Obsidian
+  autoSelect: false
+  recipes:
+  - make_iron_fence
+  - cast_obsidian
+  - make_chains
+  - make_anvil
+  - make_bucket
+  - make_iron_trapdoor
+  - make_iron_door
+  - make_tripwire
+  - make_shears
+  - make_radar
+  - make_cauldron
+  - make_lantern
+  - make_soul_lantern
+  - repair_forge
+  activator: 'null'
+  runcounts:
+    Make Iron Bars: 0
+    Cast Obsidian: 52
+    Make Chains: 0
+    Make Anvils: 0
+    Make Buckets: 0
+    Make Iron Trapdoors: 0
+    Make Iron Doors: 0
+    Make Tripwire Hooks: 0
+    Make Shears: 0
+    Make Radar: 0
+    Make Cauldrons: 0
+    Make Lanterns: 0
+    Make Soul Lanterns: 0
+    Repair Factory: 0
+  recipeLevels:
+    Make Iron Bars: 1
+    Cast Obsidian: 1
+    Make Chains: 1
+    Make Anvils: 1
+    Make Buckets: 1
+    Make Iron Trapdoors: 1
+    Make Iron Doors: 1
+    Make Tripwire Hooks: 1
+    Make Shears: 1
+    Make Radar: 1
+    Make Cauldrons: 1
+    Make Lanterns: 1
+    Make Soul Lanterns: 1
+    Repair Factory: 1
+  furnace-io:
+    in:
+    - BACK
+    out: []
+    fuel: []
+  table-io:
+    in:
+    - TOP
+    - RIGHT
+    out:
+    - BOTTOM
+    fuel: []
+  ui-menu-mode: IOCONFIG
+builds_world#-131#-59#-89:
+  name: Carpentry Factory
+  blocks:
+    a0builds_world#-131#-59#-89:
+      world: builds_world
+      x: -131
+      y: -59
+      z: -89
+    a1builds_world#-131#-60#-89:
+      world: builds_world
+      x: -131
+      y: -60
+      z: -89
+    a2builds_world#-131#-58#-89:
+      world: builds_world
+      x: -131
+      y: -58
+      z: -89
+  type: FCC
+  health: 0
+  breakTime: 1660106397547
+  runtime: 0
+  selectedRecipe: Make Crates
+  autoSelect: false
+  recipes:
+  - make_ladders
+  - make_bookshelves
+  - make_beehive
+  - make_casing
+  - make_crates
+  - sticks_to_chest
+  - make_fences
+  - make_fence_gates
+  - make_signs
+  - make_trapdoors
+  - make_wood_doors
+  - make_spruce_fences
+  - make_spruce_fence_gates
+  - make_spruce_signs
+  - make_spruce_trapdoors
+  - make_spruce_doors
+  - make_birch_fences
+  - make_birch_fence_gates
+  - make_birch_signs
+  - make_birch_trapdoors
+  - make_birch_doors
+  - make_jungle_fences
+  - make_jungle_fence_gates
+  - make_jungle_signs
+  - make_jungle_trapdoors
+  - make_jungle_doors
+  - make_acacia_fences
+  - make_acacia_fence_gates
+  - make_acacia_signs
+  - make_acacia_trapdoors
+  - make_acacia_doors
+  - make_dark_oak_fences
+  - make_dark_oak_fence_gates
+  - make_dark_oak_signs
+  - make_dark_oak_trapdoors
+  - make_dark_oak_doors
+  - make_crimson_fences
+  - make_crimson_fence_gates
+  - make_crimson_signs
+  - make_crimson_trapdoors
+  - make_crimson_doors
+  - make_warped_fences
+  - make_warped_fence_gates
+  - make_warped_signs
+  - make_warped_trapdoors
+  - make_warped_doors
+  - repair_carpentry
+  activator: 'null'
+  runcounts:
+    Make Ladders: 0
+    Make Bookshelves: 0
+    Make Beehive: 0
+    Make Casings: 0
+    Make Crates: 0
+    Reconstitute Sticks to Chests: 0
+    Make Fences: 0
+    Make Fence Gates: 0
+    Make Signs: 0
+    Make Trap Doors: 0
+    Make Wood Doors: 0
+    Make Doors: 0
+    Repair Factory: 0
+  recipeLevels:
+    Make Ladders: 1
+    Make Bookshelves: 1
+    Make Beehive: 1
+    Make Casings: 1
+    Make Crates: 1
+    Reconstitute Sticks to Chests: 1
+    Make Fences: 1
+    Make Fence Gates: 1
+    Make Signs: 1
+    Make Trap Doors: 1
+    Make Wood Doors: 1
+    Make Doors: 1
+    Repair Factory: 1
+  furnace-io:
+    in: []
+    out: []
+    fuel: []
+  table-io:
+    in: []
+    out: []
+    fuel: []
+  ui-menu-mode: SIMPLE
+builds_world#-162#-59#-98:
+  name: Basic Smelter
+  blocks:
+    a0builds_world#-162#-59#-98:
+      world: builds_world
+      x: -162
+      y: -59
+      z: -98
+    a1builds_world#-162#-60#-98:
+      world: builds_world
+      x: -162
+      y: -60
+      z: -98
+    a2builds_world#-162#-58#-98:
+      world: builds_world
+      x: -162
+      y: -58
+      z: -98
+  type: FCC
+  health: 0
+  breakTime: 1659937197574
+  runtime: 0
+  selectedRecipe: Smelt Stone
+  autoSelect: false
+  recipes:
+  - smelt_stone
+  - smelt_smooth_stone
+  - smelt_cracked_stone_bricks
+  - smelt_glass
+  - smelt_glass_red
+  - smelt_netherrack
+  - smelt_red_netherbrick
+  - smelt_bricks
+  - smelt_hard_clay
+  - smelt_sandstone
+  - smelt_smooth_sandstone
+  - smelt_smooth_red_sandstone
+  - smelt_smooth_quartz
+  - repair_stone_smelter
+  activator: 'null'
+  runcounts:
+    Smelt Stone: 54
+    Smelt Smooth Stone: 0
+    Smelt Cracked Stone Bricks: 0
+    Smelt Glass from Sand: 0
+    Smelt Glass from Red Sand: 0
+    Smelt Netherrack: 0
+    Smelt Red Netherbrick: 0
+    Bake Bricks: 0
+    Make Hard Clay: 0
+    Make Sandstone: 0
+    Make Smooth Sandstone: 0
+    Make Smooth Red Sandstone: 0
+    Make Smooth Quartz: 0
+    Repair Factory: 0
+  recipeLevels:
+    Smelt Stone: 1
+    Smelt Smooth Stone: 1
+    Smelt Cracked Stone Bricks: 1
+    Smelt Glass from Sand: 1
+    Smelt Glass from Red Sand: 1
+    Smelt Netherrack: 1
+    Smelt Red Netherbrick: 1
+    Bake Bricks: 1
+    Make Hard Clay: 1
+    Make Sandstone: 1
+    Make Smooth Sandstone: 1
+    Make Smooth Red Sandstone: 1
+    Make Smooth Quartz: 1
+    Repair Factory: 1
+  furnace-io:
+    in:
+    - LEFT
+    out:
+    - RIGHT
+    fuel: []
+  table-io:
+    in:
+    - TOP
+    - LEFT
+    out:
+    - TOP
+    - RIGHT
+    fuel: []
+  ui-menu-mode: IOCONFIG
+builds_world#-98#-29#-100:
+  name: Iron Forge
+  blocks:
+    a0builds_world#-98#-29#-100:
+      world: builds_world
+      x: -98
+      y: -29
+      z: -100
+    a1builds_world#-99#-29#-100:
+      world: builds_world
+      x: -99
+      y: -29
+      z: -100
+    a2builds_world#-97#-29#-100:
+      world: builds_world
+      x: -97
+      y: -29
+      z: -100
+  type: FCC
+  health: 0
+  breakTime: 1660203597554
+  runtime: 0
+  selectedRecipe: Cast Obsidian
+  autoSelect: false
+  recipes:
+  - make_iron_fence
+  - cast_obsidian
+  - make_chains
+  - make_anvil
+  - make_bucket
+  - make_iron_trapdoor
+  - make_iron_door
+  - make_tripwire
+  - make_shears
+  - make_radar
+  - make_cauldron
+  - make_lantern
+  - make_soul_lantern
+  - repair_forge
+  activator: 'null'
+  runcounts:
+    Make Iron Bars: 0
+    Cast Obsidian: 646
+    Make Chains: 0
+    Make Anvils: 0
+    Make Buckets: 0
+    Make Iron Trapdoors: 0
+    Make Iron Doors: 0
+    Make Tripwire Hooks: 0
+    Make Shears: 0
+    Make Radar: 0
+    Make Cauldrons: 0
+    Make Lanterns: 0
+    Make Soul Lanterns: 0
+    Repair Factory: 1
+  recipeLevels:
+    Make Iron Bars: 1
+    Cast Obsidian: 1
+    Make Chains: 1
+    Make Anvils: 1
+    Make Buckets: 1
+    Make Iron Trapdoors: 1
+    Make Iron Doors: 1
+    Make Tripwire Hooks: 1
+    Make Shears: 1
+    Make Radar: 1
+    Make Cauldrons: 1
+    Make Lanterns: 1
+    Make Soul Lanterns: 1
+    Repair Factory: 1
+  furnace-io:
+    in:
+    - BACK
+    out: []
+    fuel: []
+  table-io:
+    in:
+    - TOP
+    - RIGHT
+    out:
+    - BOTTOM
+    fuel: []
+  ui-menu-mode: IOCONFIG
+builds_world#-125#-29#-101:
+  name: Iron Forge
+  blocks:
+    a0builds_world#-125#-29#-101:
+      world: builds_world
+      x: -125
+      y: -29
+      z: -101
+    a1builds_world#-124#-29#-101:
+      world: builds_world
+      x: -124
+      y: -29
+      z: -101
+    a2builds_world#-126#-29#-101:
+      world: builds_world
+      x: -126
+      y: -29
+      z: -101
+  type: FCC
+  health: 0
+  breakTime: 1660199997550
+  runtime: 0
+  selectedRecipe: Cast Obsidian
+  autoSelect: false
+  recipes:
+  - make_iron_fence
+  - cast_obsidian
+  - make_chains
+  - make_anvil
+  - make_bucket
+  - make_iron_trapdoor
+  - make_iron_door
+  - make_tripwire
+  - make_shears
+  - make_radar
+  - make_cauldron
+  - make_lantern
+  - make_soul_lantern
+  - repair_forge
+  activator: 'null'
+  runcounts:
+    Make Iron Bars: 0
+    Cast Obsidian: 172
+    Make Chains: 0
+    Make Anvils: 0
+    Make Buckets: 0
+    Make Iron Trapdoors: 0
+    Make Iron Doors: 0
+    Make Tripwire Hooks: 0
+    Make Shears: 0
+    Make Radar: 0
+    Make Cauldrons: 0
+    Make Lanterns: 0
+    Make Soul Lanterns: 0
+    Repair Factory: 0
+  recipeLevels:
+    Make Iron Bars: 1
+    Cast Obsidian: 1
+    Make Chains: 1
+    Make Anvils: 1
+    Make Buckets: 1
+    Make Iron Trapdoors: 1
+    Make Iron Doors: 1
+    Make Tripwire Hooks: 1
+    Make Shears: 1
+    Make Radar: 1
+    Make Cauldrons: 1
+    Make Lanterns: 1
+    Make Soul Lanterns: 1
+    Repair Factory: 1
+  furnace-io:
+    in: []
+    out: []
+    fuel: []
+  table-io:
+    in:
+    - TOP
+    - LEFT
+    out:
+    - BOTTOM
+    fuel: []
+  ui-menu-mode: IOCONFIG
+builds_world#-162#-59#-92:
+  name: Compactor
+  blocks:
+    a0builds_world#-162#-59#-92:
+      world: builds_world
+      x: -162
+      y: -59
+      z: -92
+    a1builds_world#-162#-60#-92:
+      world: builds_world
+      x: -162
+      y: -60
+      z: -92
+    a2builds_world#-162#-58#-92:
+      world: builds_world
+      x: -162
+      y: -58
+      z: -92
+  type: FCC
+  health: 0
+  breakTime: 1658210449722
+  runtime: 0
+  selectedRecipe: Compact
+  autoSelect: false
+  recipes:
+  - compact
+  - decompact
+  - make_compact_repair_kit
+  - repair_compactor
+  - repair_compactor_kit
+  activator: 'null'
+  runcounts:
+    Compact: 81
+    Decompact: 0
+    Make Compact Repair Kit: 0
+    Repair Factory: 0
+    Repair Factory using Repair Kit: 0
+  recipeLevels:
+    Compact: 1
+    Decompact: 1
+    Make Compact Repair Kit: 1
+    Repair Factory: 1
+    Repair Factory using Repair Kit: 1
+  furnace-io:
+    in:
+    - LEFT
+    - RIGHT
+    - BACK
+    out: []
+    fuel: []
+  table-io:
+    in:
+    - TOP
+    - LEFT
+    - BACK
+    out:
+    - RIGHT
+    fuel: []
+  ui-menu-mode: IOCONFIG
+builds_world#-110#-60#-63:
+  name: Compactor
+  blocks:
+    a0builds_world#-110#-60#-63:
+      world: builds_world
+      x: -110
+      y: -60
+      z: -63
+    a1builds_world#-111#-60#-63:
+      world: builds_world
+      x: -111
+      y: -60
+      z: -63
+    a2builds_world#-109#-60#-63:
+      world: builds_world
+      x: -109
+      y: -60
+      z: -63
+  type: FCC
+  health: 4561
+  breakTime: 0
+  runtime: 0
+  selectedRecipe: Compact
+  autoSelect: false
+  recipes:
+  - compact
+  - decompact
+  - make_compact_repair_kit
+  - repair_compactor
+  - repair_compactor_kit
+  activator: 'null'
+  runcounts:
+    Compact: 0
+    Decompact: 0
+    Make Compact Repair Kit: 0
+    Repair Factory: 0
+    Repair Factory using Repair Kit: 0
+  recipeLevels:
+    Compact: 1
+    Decompact: 1
+    Make Compact Repair Kit: 1
+    Repair Factory: 1
+    Repair Factory using Repair Kit: 1
+  furnace-io:
+    in: []
+    out: []
+    fuel: []
+  table-io:
+    in: []
+    out: []
+    fuel: []
+  ui-menu-mode: SIMPLE
+altepetl-builds#7689#74#-729:
+  name: Printing Press
+  blocks:
+    a0altepetl-builds#7689#74#-729:
+      world: altepetl-builds
+      x: 7689
+      y: 74
+      z: -729
+    a1altepetl-builds#7688#74#-729:
+      world: altepetl-builds
+      x: 7688
+      y: 74
+      z: -729
+    a2altepetl-builds#7690#74#-729:
+      world: altepetl-builds
+      x: 7690
+      y: 74
+      z: -729
+  type: FCC
+  health: 5758
+  breakTime: 0
+  runtime: 0
+  selectedRecipe: Print Note
+  autoSelect: false
+  recipes:
+  - bind_books
+  - bind_writable_books
+  - craft_printing_plate
+  - craft_printing_plate_json
+  - print_book
+  - print_note
+  - print_secure_note
+  - repair_printer
+  - craft_globe_banner_pattern
+  - craft_piglin_banner_pattern
+  - craft_creeper_banner_pattern
+  activator: 'null'
+  runcounts:
+    Bind Books: 0
+    Bind Writable Books: 0
+    Craft Printing Plate: 163
+    Craft JSON Printing Plate: 0
+    Print Book: 0
+    Print Note: 230
+    Print Secure Note: 0
+    Repair Printer: 1
+    Craft Globe Banner Pattern: 0
+    Craft Piglin Banner Pattern: 0
+    Craft Creeper Banner Pattern: 0
+  recipeLevels:
+    Bind Books: 1
+    Bind Writable Books: 1
+    Craft Printing Plate: 1
+    Craft JSON Printing Plate: 1
+    Print Book: 1
+    Print Note: 1
+    Print Secure Note: 1
+    Repair Printer: 1
+    Craft Globe Banner Pattern: 1
+    Craft Piglin Banner Pattern: 1
+    Craft Creeper Banner Pattern: 1
+  furnace-io:
+    in:
+    - RIGHT
+    out: []
+    fuel: []
+  table-io:
+    in:
+    - BOTTOM
+    - LEFT
+    - BACK
+    out:
+    - LEFT
+    fuel: []
+  ui-menu-mode: IOCONFIG
+builds_world#-134#-54#-96:
+  name: Iron Forge
+  blocks:
+    a0builds_world#-134#-54#-96:
+      world: builds_world
+      x: -134
+      y: -54
+      z: -96
+    a1builds_world#-134#-55#-96:
+      world: builds_world
+      x: -134
+      y: -55
+      z: -96
+    a2builds_world#-134#-53#-96:
+      world: builds_world
+      x: -134
+      y: -53
+      z: -96
+  type: FCC
+  health: 0
+  breakTime: 1660106397549
+  runtime: 0
+  selectedRecipe: Cast Obsidian
+  autoSelect: false
+  recipes:
+  - make_iron_fence
+  - cast_obsidian
+  - make_chains
+  - make_anvil
+  - make_bucket
+  - make_iron_trapdoor
+  - make_iron_door
+  - make_tripwire
+  - make_shears
+  - make_radar
+  - make_cauldron
+  - make_lantern
+  - make_soul_lantern
+  - repair_forge
+  activator: 'null'
+  runcounts:
+    Make Iron Bars: 1
+    Cast Obsidian: 4
+    Make Chains: 0
+    Make Anvils: 0
+    Make Buckets: 0
+    Make Iron Trapdoors: 0
+    Make Iron Doors: 0
+    Make Tripwire Hooks: 0
+    Make Shears: 0
+    Make Radar: 0
+    Make Cauldrons: 0
+    Make Lanterns: 0
+    Make Soul Lanterns: 0
+    Repair Factory: 0
+  recipeLevels:
+    Make Iron Bars: 1
+    Cast Obsidian: 1
+    Make Chains: 1
+    Make Anvils: 1
+    Make Buckets: 1
+    Make Iron Trapdoors: 1
+    Make Iron Doors: 1
+    Make Tripwire Hooks: 1
+    Make Shears: 1
+    Make Radar: 1
+    Make Cauldrons: 1
+    Make Lanterns: 1
+    Make Soul Lanterns: 1
+    Repair Factory: 1
+  furnace-io:
+    in: []
+    out:
+    - LEFT
+    fuel: []
+  table-io:
+    in:
+    - TOP
+    - LEFT
+    out: []
+    fuel: []
+  ui-menu-mode: IOCONFIG
+builds_world#-176#-60#-93:
+  name: Compactor
+  blocks:
+    a0builds_world#-176#-60#-93:
+      world: builds_world
+      x: -176
+      y: -60
+      z: -93
+    a1builds_world#-176#-60#-94:
+      world: builds_world
+      x: -176
+      y: -60
+      z: -94
+    a2builds_world#-176#-60#-92:
+      world: builds_world
+      x: -176
+      y: -60
+      z: -92
+  type: FCC
+  health: 0
+  breakTime: 1659937197574
+  runtime: 0
+  selectedRecipe: Compact
+  autoSelect: false
+  recipes:
+  - compact
+  - decompact
+  - make_compact_repair_kit
+  - repair_compactor
+  - repair_compactor_kit
+  activator: 'null'
+  runcounts:
+    Compact: 107
+    Decompact: 0
+    Make Compact Repair Kit: 0
+    Repair Factory: 0
+    Repair Factory using Repair Kit: 0
+  recipeLevels:
+    Compact: 1
+    Decompact: 1
+    Make Compact Repair Kit: 1
+    Repair Factory: 1
+    Repair Factory using Repair Kit: 1
+  furnace-io:
+    in:
+    - BOTTOM
+    - FRONT
+    out:
+    - TOP
+    fuel: []
+  table-io:
+    in:
+    - TOP
+    - BOTTOM
+    - LEFT
+    - FRONT
+    out: []
+    fuel: []
+  ui-menu-mode: IOCONFIG
+builds_world#-97#-30#-101:
+  name: Compactor
+  blocks:
+    a0builds_world#-97#-30#-101:
+      world: builds_world
+      x: -97
+      y: -30
+      z: -101
+    a1builds_world#-97#-30#-100:
+      world: builds_world
+      x: -97
+      y: -30
+      z: -100
+    a2builds_world#-97#-30#-102:
+      world: builds_world
+      x: -97
+      y: -30
+      z: -102
+  type: FCC
+  health: 0
+  breakTime: 1660203597554
+  runtime: 0
+  selectedRecipe: Compact
+  autoSelect: false
+  recipes:
+  - compact
+  - decompact
+  - make_compact_repair_kit
+  - repair_compactor
+  - repair_compactor_kit
+  activator: 'null'
+  runcounts:
+    Compact: 1301
+    Decompact: 0
+    Make Compact Repair Kit: 0
+    Repair Factory: 0
+    Repair Factory using Repair Kit: 0
+  recipeLevels:
+    Compact: 1
+    Decompact: 1
+    Make Compact Repair Kit: 1
+    Repair Factory: 1
+    Repair Factory using Repair Kit: 1
+  furnace-io:
+    in:
+    - LEFT
+    out: []
+    fuel: []
+  table-io:
+    in:
+    - TOP
+    - LEFT
+    out:
+    - RIGHT
+    fuel: []
+  ui-menu-mode: IOCONFIG
+builds_world#-161#-59#-98:
+  name: Basic Smelter
+  blocks:
+    a0builds_world#-161#-59#-98:
+      world: builds_world
+      x: -161
+      y: -59
+      z: -98
+    a1builds_world#-161#-60#-98:
+      world: builds_world
+      x: -161
+      y: -60
+      z: -98
+    a2builds_world#-161#-58#-98:
+      world: builds_world
+      x: -161
+      y: -58
+      z: -98
+  type: FCC
+  health: 0
+  breakTime: 1659937197574
+  runtime: 0
+  selectedRecipe: Smelt Stone
+  autoSelect: false
+  recipes:
+  - smelt_stone
+  - smelt_smooth_stone
+  - smelt_cracked_stone_bricks
+  - smelt_glass
+  - smelt_glass_red
+  - smelt_netherrack
+  - smelt_red_netherbrick
+  - smelt_bricks
+  - smelt_hard_clay
+  - smelt_sandstone
+  - smelt_smooth_sandstone
+  - smelt_smooth_red_sandstone
+  - smelt_smooth_quartz
+  - repair_stone_smelter
+  activator: 'null'
+  runcounts:
+    Smelt Stone: 54
+    Smelt Smooth Stone: 0
+    Smelt Cracked Stone Bricks: 0
+    Smelt Glass from Sand: 0
+    Smelt Glass from Red Sand: 0
+    Smelt Netherrack: 0
+    Smelt Red Netherbrick: 0
+    Bake Bricks: 0
+    Make Hard Clay: 0
+    Make Sandstone: 0
+    Make Smooth Sandstone: 0
+    Make Smooth Red Sandstone: 0
+    Make Smooth Quartz: 0
+    Repair Factory: 0
+  recipeLevels:
+    Smelt Stone: 1
+    Smelt Smooth Stone: 1
+    Smelt Cracked Stone Bricks: 1
+    Smelt Glass from Sand: 1
+    Smelt Glass from Red Sand: 1
+    Smelt Netherrack: 1
+    Smelt Red Netherbrick: 1
+    Bake Bricks: 1
+    Make Hard Clay: 1
+    Make Sandstone: 1
+    Make Smooth Sandstone: 1
+    Make Smooth Red Sandstone: 1
+    Make Smooth Quartz: 1
+    Repair Factory: 1
+  furnace-io:
+    in:
+    - RIGHT
+    out:
+    - LEFT
+    fuel: []
+  table-io:
+    in:
+    - TOP
+    - RIGHT
+    out:
+    - TOP
+    - LEFT
+    fuel: []
+  ui-menu-mode: IOCONFIG
+builds_world#-134#-54#-97:
+  name: Compactor
+  blocks:
+    a0builds_world#-134#-54#-97:
+      world: builds_world
+      x: -134
+      y: -54
+      z: -97
+    a1builds_world#-134#-55#-97:
+      world: builds_world
+      x: -134
+      y: -55
+      z: -97
+    a2builds_world#-134#-53#-97:
+      world: builds_world
+      x: -134
+      y: -53
+      z: -97
+  type: FCC
+  health: 0
+  breakTime: 1660106397549
+  runtime: 0
+  selectedRecipe: Compact
+  autoSelect: false
+  recipes:
+  - compact
+  - decompact
+  - make_compact_repair_kit
+  - repair_compactor
+  - repair_compactor_kit
+  activator: 'null'
+  runcounts:
+    Compact: 14
+    Decompact: 0
+    Make Compact Repair Kit: 0
+    Repair Factory: 0
+    Repair Factory using Repair Kit: 0
+  recipeLevels:
+    Compact: 1
+    Decompact: 1
+    Make Compact Repair Kit: 1
+    Repair Factory: 1
+    Repair Factory using Repair Kit: 1
+  furnace-io:
+    in: []
+    out: []
+    fuel: []
+  table-io:
+    in:
+    - TOP
+    - LEFT
+    out:
+    - RIGHT
+    fuel: []
+  ui-menu-mode: IOCONFIG
+builds_world#-161#-59#-105:
+  name: Basic Smelter
+  blocks:
+    a0builds_world#-161#-59#-105:
+      world: builds_world
+      x: -161
+      y: -59
+      z: -105
+    a1builds_world#-161#-60#-105:
+      world: builds_world
+      x: -161
+      y: -60
+      z: -105
+    a2builds_world#-161#-58#-105:
+      world: builds_world
+      x: -161
+      y: -58
+      z: -105
+  type: FCC
+  health: 0
+  breakTime: 1659937197540
+  runtime: 0
+  selectedRecipe: Smelt Stone
+  autoSelect: false
+  recipes:
+  - smelt_stone
+  - smelt_smooth_stone
+  - smelt_cracked_stone_bricks
+  - smelt_glass
+  - smelt_glass_red
+  - smelt_netherrack
+  - smelt_red_netherbrick
+  - smelt_bricks
+  - smelt_hard_clay
+  - smelt_sandstone
+  - smelt_smooth_sandstone
+  - smelt_smooth_red_sandstone
+  - smelt_smooth_quartz
+  - repair_stone_smelter
+  activator: 'null'
+  runcounts:
+    Smelt Stone: 72
+    Smelt Smooth Stone: 0
+    Smelt Cracked Stone Bricks: 0
+    Smelt Glass from Sand: 0
+    Smelt Glass from Red Sand: 0
+    Smelt Netherrack: 0
+    Smelt Red Netherbrick: 0
+    Bake Bricks: 0
+    Make Hard Clay: 0
+    Make Sandstone: 0
+    Make Smooth Sandstone: 0
+    Make Smooth Red Sandstone: 0
+    Make Smooth Quartz: 0
+    Repair Factory: 0
+  recipeLevels:
+    Smelt Stone: 1
+    Smelt Smooth Stone: 1
+    Smelt Cracked Stone Bricks: 1
+    Smelt Glass from Sand: 1
+    Smelt Glass from Red Sand: 1
+    Smelt Netherrack: 1
+    Smelt Red Netherbrick: 1
+    Bake Bricks: 1
+    Make Hard Clay: 1
+    Make Sandstone: 1
+    Make Smooth Sandstone: 1
+    Make Smooth Red Sandstone: 1
+    Make Smooth Quartz: 1
+    Repair Factory: 1
+  furnace-io:
+    in:
+    - RIGHT
+    out:
+    - LEFT
+    fuel: []
+  table-io:
+    in:
+    - RIGHT
+    out:
+    - LEFT
+    fuel: []
+  ui-menu-mode: IOCONFIG
+builds_world#-124#-28#-102:
+  name: Compactor
+  blocks:
+    a0builds_world#-124#-28#-102:
+      world: builds_world
+      x: -124
+      y: -28
+      z: -102
+    a1builds_world#-124#-28#-101:
+      world: builds_world
+      x: -124
+      y: -28
+      z: -101
+    a2builds_world#-124#-28#-103:
+      world: builds_world
+      x: -124
+      y: -28
+      z: -103
+  type: FCC
+  health: 0
+  breakTime: 1660199997553
+  runtime: 0
+  selectedRecipe: Compact
+  autoSelect: false
+  recipes:
+  - compact
+  - decompact
+  - make_compact_repair_kit
+  - repair_compactor
+  - repair_compactor_kit
+  activator: 'null'
+  runcounts:
+    Compact: 814
+    Decompact: 0
+    Make Compact Repair Kit: 0
+    Repair Factory: 0
+    Repair Factory using Repair Kit: 0
+  recipeLevels:
+    Compact: 1
+    Decompact: 1
+    Make Compact Repair Kit: 1
+    Repair Factory: 1
+    Repair Factory using Repair Kit: 1
+  furnace-io:
+    in: []
+    out:
+    - LEFT
+    fuel: []
+  table-io:
+    in:
+    - BOTTOM
+    - RIGHT
+    - BACK
+    out:
+    - LEFT
+    fuel: []
+  ui-menu-mode: IOCONFIG
+builds_world#-132#-59#-89:
+  name: Compactor
+  blocks:
+    a0builds_world#-132#-59#-89:
+      world: builds_world
+      x: -132
+      y: -59
+      z: -89
+    a1builds_world#-132#-60#-89:
+      world: builds_world
+      x: -132
+      y: -60
+      z: -89
+    a2builds_world#-132#-58#-89:
+      world: builds_world
+      x: -132
+      y: -58
+      z: -89
+  type: FCC
+  health: 0
+  breakTime: 1660106397549
+  runtime: 0
+  selectedRecipe: Compact
+  autoSelect: false
+  recipes:
+  - compact
+  - decompact
+  - make_compact_repair_kit
+  - repair_compactor
+  - repair_compactor_kit
+  activator: 'null'
+  runcounts:
+    Compact: 4
+    Decompact: 0
+    Make Compact Repair Kit: 0
+    Repair Factory: 0
+    Repair Factory using Repair Kit: 0
+  recipeLevels:
+    Compact: 1
+    Decompact: 1
+    Make Compact Repair Kit: 1
+    Repair Factory: 1
+    Repair Factory using Repair Kit: 1
+  furnace-io:
+    in: []
+    out: []
+    fuel: []
+  table-io:
+    in:
+    - TOP
+    out:
+    - TOP
+    fuel: []
+  ui-menu-mode: SIMPLE
+builds_world#-159#-57#-32:
+  name: Compactor
+  blocks:
+    a0builds_world#-159#-57#-32:
+      world: builds_world
+      x: -159
+      y: -57
+      z: -32
+    a1builds_world#-158#-57#-32:
+      world: builds_world
+      x: -158
+      y: -57
+      z: -32
+    a2builds_world#-160#-57#-32:
+      world: builds_world
+      x: -160
+      y: -57
+      z: -32
+  type: FCC
+  health: 277
+  breakTime: 0
+  runtime: 0
+  selectedRecipe: Decompact
+  autoSelect: false
+  recipes:
+  - compact
+  - decompact
+  - make_compact_repair_kit
+  - repair_compactor
+  - repair_compactor_kit
+  activator: 'null'
+  runcounts:
+    Compact: 0
+    Decompact: 70
+    Make Compact Repair Kit: 0
+    Repair Factory: 0
+    Repair Factory using Repair Kit: 0
+  recipeLevels:
+    Compact: 1
+    Decompact: 1
+    Make Compact Repair Kit: 1
+    Repair Factory: 1
+    Repair Factory using Repair Kit: 1
+  furnace-io:
+    in: []
+    out: []
+    fuel: []
+  table-io:
+    in:
+    - BOTTOM
+    out:
+    - LEFT
+    fuel: []
+  ui-menu-mode: IOCONFIG
+builds_world#-97#-28#-101:
+  name: Compactor
+  blocks:
+    a0builds_world#-97#-28#-101:
+      world: builds_world
+      x: -97
+      y: -28
+      z: -101
+    a1builds_world#-97#-28#-100:
+      world: builds_world
+      x: -97
+      y: -28
+      z: -100
+    a2builds_world#-97#-28#-102:
+      world: builds_world
+      x: -97
+      y: -28
+      z: -102
+  type: FCC
+  health: 0
+  breakTime: 1660203597553
+  runtime: 0
+  selectedRecipe: Compact
+  autoSelect: false
+  recipes:
+  - compact
+  - decompact
+  - make_compact_repair_kit
+  - repair_compactor
+  - repair_compactor_kit
+  activator: 'null'
+  runcounts:
+    Compact: 3532
+    Decompact: 0
+    Make Compact Repair Kit: 0
+    Repair Factory: 0
+    Repair Factory using Repair Kit: 0
+  recipeLevels:
+    Compact: 1
+    Decompact: 1
+    Make Compact Repair Kit: 1
+    Repair Factory: 1
+    Repair Factory using Repair Kit: 1
+  furnace-io:
+    in: []
+    out:
+    - BOTTOM
+    - LEFT
+    fuel: []
+  table-io:
+    in:
+    - BOTTOM
+    - RIGHT
+    - BACK
+    out:
+    - LEFT
+    fuel: []
+  ui-menu-mode: IOCONFIG
+builds_world#-152#-42#-32:
+  name: Compactor
+  blocks:
+    a0builds_world#-152#-42#-32:
+      world: builds_world
+      x: -152
+      y: -42
+      z: -32
+    a1builds_world#-152#-42#-31:
+      world: builds_world
+      x: -152
+      y: -42
+      z: -31
+    a2builds_world#-152#-42#-33:
+      world: builds_world
+      x: -152
+      y: -42
+      z: -33
+  type: FCC
+  health: 0
+  breakTime: 1661062557952
+  runtime: 0
+  selectedRecipe: Compact
+  autoSelect: false
+  recipes:
+  - compact
+  - decompact
+  - make_compact_repair_kit
+  - repair_compactor
+  - repair_compactor_kit
+  activator: 'null'
+  runcounts:
+    Compact: 104
+    Decompact: 0
+    Make Compact Repair Kit: 0
+    Repair Factory: 0
+    Repair Factory using Repair Kit: 0
+  recipeLevels:
+    Compact: 1
+    Decompact: 1
+    Make Compact Repair Kit: 1
+    Repair Factory: 1
+    Repair Factory using Repair Kit: 1
+  furnace-io:
+    in:
+    - LEFT
+    out: []
+    fuel: []
+  table-io:
+    in:
+    - TOP
+    - LEFT
+    out:
+    - RIGHT
+    fuel: []
+  ui-menu-mode: IOCONFIG
+builds_world#-102#-60#-90:
+  name: Basic Smelter
+  blocks:
+    a0builds_world#-102#-60#-90:
+      world: builds_world
+      x: -102
+      y: -60
+      z: -90
+    a1builds_world#-102#-60#-91:
+      world: builds_world
+      x: -102
+      y: -60
+      z: -91
+    a2builds_world#-102#-60#-89:
+      world: builds_world
+      x: -102
+      y: -60
+      z: -89
+  type: FCC
+  health: 0
+  breakTime: 1658490106383
+  runtime: 0
+  selectedRecipe: Repair Factory
+  autoSelect: false
+  recipes:
+  - smelt_stone
+  - smelt_smooth_stone
+  - smelt_cracked_stone_bricks
+  - smelt_glass
+  - smelt_glass_red
+  - smelt_netherrack
+  - smelt_red_netherbrick
+  - smelt_bricks
+  - smelt_hard_clay
+  - smelt_sandstone
+  - smelt_smooth_sandstone
+  - smelt_smooth_red_sandstone
+  - smelt_smooth_quartz
+  - repair_stone_smelter
+  activator: 'null'
+  runcounts:
+    Smelt Stone: 1
+    Smelt Smooth Stone: 0
+    Smelt Cracked Stone Bricks: 0
+    Smelt Glass from Sand: 0
+    Smelt Glass from Red Sand: 0
+    Smelt Netherrack: 0
+    Smelt Red Netherbrick: 0
+    Bake Bricks: 0
+    Make Hard Clay: 0
+    Make Sandstone: 0
+    Make Smooth Sandstone: 0
+    Make Smooth Red Sandstone: 0
+    Make Smooth Quartz: 0
+    Repair Factory: 0
+  recipeLevels:
+    Smelt Stone: 1
+    Smelt Smooth Stone: 1
+    Smelt Cracked Stone Bricks: 1
+    Smelt Glass from Sand: 1
+    Smelt Glass from Red Sand: 1
+    Smelt Netherrack: 1
+    Smelt Red Netherbrick: 1
+    Bake Bricks: 1
+    Make Hard Clay: 1
+    Make Sandstone: 1
+    Make Smooth Sandstone: 1
+    Make Smooth Red Sandstone: 1
+    Make Smooth Quartz: 1
+    Repair Factory: 1
+  furnace-io:
+    in: []
+    out: []
+    fuel: []
+  table-io:
+    in:
+    - RIGHT
+    out:
+    - RIGHT
+    fuel: []
+  ui-menu-mode: SIMPLE
+builds_world#-177#-60#-93:
+  name: Compactor
+  blocks:
+    a0builds_world#-177#-60#-93:
+      world: builds_world
+      x: -177
+      y: -60
+      z: -93
+    a1builds_world#-177#-60#-94:
+      world: builds_world
+      x: -177
+      y: -60
+      z: -94
+    a2builds_world#-177#-60#-92:
+      world: builds_world
+      x: -177
+      y: -60
+      z: -92
+  type: FCC
+  health: 0
+  breakTime: 1659937197574
+  runtime: 0
+  selectedRecipe: Compact
+  autoSelect: false
+  recipes:
+  - compact
+  - decompact
+  - make_compact_repair_kit
+  - repair_compactor
+  - repair_compactor_kit
+  activator: 'null'
+  runcounts:
+    Compact: 108
+    Decompact: 0
+    Make Compact Repair Kit: 0
+    Repair Factory: 0
+    Repair Factory using Repair Kit: 0
+  recipeLevels:
+    Compact: 1
+    Decompact: 1
+    Make Compact Repair Kit: 1
+    Repair Factory: 1
+    Repair Factory using Repair Kit: 1
+  furnace-io:
+    in:
+    - BOTTOM
+    - FRONT
+    out:
+    - TOP
+    fuel: []
+  table-io:
+    in:
+    - TOP
+    - BOTTOM
+    - RIGHT
+    - FRONT
+    out: []
+    fuel: []
+  ui-menu-mode: IOCONFIG
+builds_world#-124#-30#-102:
+  name: Compactor
+  blocks:
+    a0builds_world#-124#-30#-102:
+      world: builds_world
+      x: -124
+      y: -30
+      z: -102
+    a1builds_world#-124#-30#-101:
+      world: builds_world
+      x: -124
+      y: -30
+      z: -101
+    a2builds_world#-124#-30#-103:
+      world: builds_world
+      x: -124
+      y: -30
+      z: -103
+  type: FCC
+  health: 0
+  breakTime: 1660199997553
+  runtime: 0
+  selectedRecipe: Compact
+  autoSelect: false
+  recipes:
+  - compact
+  - decompact
+  - make_compact_repair_kit
+  - repair_compactor
+  - repair_compactor_kit
+  activator: 'null'
+  runcounts:
+    Compact: 281
+    Decompact: 0
+    Make Compact Repair Kit: 0
+    Repair Factory: 0
+    Repair Factory using Repair Kit: 0
+  recipeLevels:
+    Compact: 1
+    Decompact: 1
+    Make Compact Repair Kit: 1
+    Repair Factory: 1
+    Repair Factory using Repair Kit: 1
+  furnace-io:
+    in:
+    - LEFT
+    out: []
+    fuel: []
+  table-io:
+    in:
+    - TOP
+    - LEFT
+    out:
+    - RIGHT
+    fuel: []
+  ui-menu-mode: IOCONFIG
+builds_world#-152#-40#-32:
+  name: Compactor
+  blocks:
+    a0builds_world#-152#-40#-32:
+      world: builds_world
+      x: -152
+      y: -40
+      z: -32
+    a1builds_world#-152#-40#-31:
+      world: builds_world
+      x: -152
+      y: -40
+      z: -31
+    a2builds_world#-152#-40#-33:
+      world: builds_world
+      x: -152
+      y: -40
+      z: -33
+  type: FCC
+  health: 0
+  breakTime: 1661062557952
+  runtime: 0
+  selectedRecipe: Compact
+  autoSelect: false
+  recipes:
+  - compact
+  - decompact
+  - make_compact_repair_kit
+  - repair_compactor
+  - repair_compactor_kit
+  activator: 'null'
+  runcounts:
+    Compact: 209
+    Decompact: 0
+    Make Compact Repair Kit: 0
+    Repair Factory: 0
+    Repair Factory using Repair Kit: 0
+  recipeLevels:
+    Compact: 1
+    Decompact: 1
+    Make Compact Repair Kit: 1
+    Repair Factory: 1
+    Repair Factory using Repair Kit: 1
+  furnace-io:
+    in: []
+    out:
+    - BOTTOM
+    - LEFT
+    fuel: []
+  table-io:
+    in:
+    - BOTTOM
+    - RIGHT
+    - BACK
+    out:
+    - LEFT
+    fuel: []
+  ui-menu-mode: IOCONFIG
