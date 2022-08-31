@@ -9,8 +9,17 @@
 **/libraries
 # Ignore version binaries
 **/versions
-# Ignore the worlds, we'll copy that over manually
+# Ignore the worlds, we'll copy that over another way
+**/world
 **/worlds
+# Ignore any generated databases
+servers/**/mariadb
+# Ignore schematics
+servers/**/schematics
+# Ignore console history, should be starting a new history for every deployment.
+*.console_history
+# Ignore the forwarding secret and future secrets
+*.secret
 
 # Ignore the plugins generated inside /hub and /proxy
 # these plugins folders are built from bindmounted volumes, sourced from plugins-common, defined in docker-compose.yml
@@ -25,10 +34,10 @@ servers/**/server-icon.png
 #**/forwarding.secret
 
 # Ignore the actual velocity jar inside /proxy or anywhere else, this is only for config geration and individual testing
-velocity*.jar
+#velocity*.jar
 # Ignore the actual paper jar inside /hub or anywhere else, this will be downloaded on setup
-paper*.jar
+#paper*.jar
+# Ignore EVERY .jar archive. We can fetch those in the docker-compose now.
+*.jar
 
-*.console_history
-servers/**/mariadb
-servers/**/schematics
+
