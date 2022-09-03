@@ -2,64 +2,40 @@ version: '3.8'
 
 services:
 
-  # For now, we'll be using itzg's preconfigured bungeecord and minecraft server containers just to get everything running
-  # https://github.com/itzg/docker-minecraft-server/ 
-  # https://github.com/itzg/docker-bungeecord
-  # This SHOULD change in the future when someone has enough time to swap this out with something assembled from scratch with the orignal Paper and Velocity jars.
-  #
-  # ...actually, nah. This works great. :)
-
   #######################################################
   # hub Profile - The main Minecraft hub world. Includes a Velocity proxy configured for modern forwarding, and a void world running on Paper.
   main-proxy:
+    build: main-proxy
     hostname: main-proxy
     container_name: main-proxy
     profiles: ["hub"]
-    image: itzg/bungeecord:java17
-    ports:
-      - "25565:25565"
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
     environment:
-      UID: 1002 #Minecraft user
-      GID: 1003 #Minecraft group
-      TYPE: VELOCITY
-      VELOCITY_VERSION: latest
       MEMORY: 512m
-      JVM_XX_OPTS: "-XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15"
-      PLUGINS: https://github.com/ViaVersion/ViaVersion/releases/download/4.4.2/ViaVersion-4.4.2.jar,https://github.com/ViaVersion/ViaBackwards/releases/download/4.4.2/ViaBackwards-4.4.2.jar
-    restart: always
-    volumes:
-      - ./servers/main-proxy:/server
+    secrets:
+      - forwarding_secret
     links:
       - main-hub
+    ports:
+      - "25565:25577"
 
   main-hub:
+    build: main-hub
     hostname: main-hub
     container_name: main-hub
     profiles: ["hub"]
-    image: itzg/minecraft-server:java17
-    ports:
-      - "30065:25565"
-    environment:
-      UID: 1002 #Minecraft user
-      GID: 1003 #Minecraft group
-      TYPE: PAPER
-      VERSION: latest
-      MEMORY: 1024m
-      USE_AIKAR_FLAGS: "TRUE"
-      EULA: "TRUE"
-      SPIGET_RESOURCES: 19254,27448,25391,102902 #ViaVersion, ViaBackwards, VoidGen, NoEncryption
-      #EXEC_DIRECTLY: true
-      # enable env variable replacement
-      REPLACE_ENV_VARIABLES: "true"
-      # define an optional prefix for env variables we want to replace
-      ENV_VARIABLE_PREFIX: "CFG_"
-      # actual variables
-      CFG_FORWARDING_SECRET_FILE: "/forwarding.secret"
+    restart: unless-stopped
     tty: true
     stdin_open: true
-    restart: always
+    environment:
+      MEMORY: 1024m
+    secrets:
+      - forwarding_secret
+    # DO NOT USE IN PRODUCTION; USE ONLY FOR INTERNAL VERIFICATION. COMMENT OUT IN PRODUCTION.
     volumes:
-      - ./servers/main-hub:/data
+      - ./local/main-hub:/data
 
   #######################################################
   # yoahtl-creative Profile
@@ -69,7 +45,7 @@ services:
     profiles: ["yoahtl-creative"]
     image: itzg/minecraft-server:java17
     ports:
-      - "30066:25565"
+      - "30066:30066"
     environment:
       UID: 1002 #Minecraft user
       GID: 1003 #Minecraft group
@@ -112,4 +88,4 @@ services:
 
 secrets:
   forwarding_secret:
-    file: /forwarding.secret
+    file: forwarding_secret
