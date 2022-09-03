@@ -10,7 +10,7 @@
 # Ignore version binaries
 **/versions
 # Ignore the contents of local - larger dirs like the Worlds and Schematics should be copied over another way
-local
+local/**
 # Ignore the worlds, we'll copy that over another way
 **/world
 **/worlds

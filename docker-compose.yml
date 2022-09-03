@@ -33,7 +33,6 @@ services:
       MEMORY: 1024m
     secrets:
       - forwarding_secret
-    # DO NOT USE IN PRODUCTION; USE ONLY FOR INTERNAL VERIFICATION. COMMENT OUT IN PRODUCTION.
     volumes:
       - ./local/main-hub:/data
 
