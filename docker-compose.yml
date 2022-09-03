@@ -36,55 +36,55 @@ services:
     volumes:
       - ./local/main-hub:/data
 
-  #######################################################
-  # yoahtl-creative Profile
-  yoahtl-creative:
-    hostname: yoahtl-creative
-    container_name: yoahtl-creative
-    profiles: ["yoahtl-creative"]
-    image: itzg/minecraft-server:java17
-    ports:
-      - "30066:30066"
-    environment:
-      UID: 1002 #Minecraft user
-      GID: 1003 #Minecraft group
-      TYPE: PAPER
-      VERSION: 1.18.2
-      MEMORY: 7168m
-      USE_AIKAR_FLAGS: true
-      EULA: "TRUE"
-      EXTRA_ARGS: '--universe ./worlds/'
-      #EXEC_DIRECTLY: true
-    tty: true
-    stdin_open: true
-    restart: unless-stopped
-    volumes:
-      - ./servers/yoahtl-creative:/data
-    depends_on:
-      - yoahtl-civdb
-  yoahtl-civdb:
-    hostname: yoahtl-civdb
-    container_name: yoahtl-civdb
-    user: minecraft
-    profiles: ["yoahtl-creative"]
-    image: mariadb:10.7.1
-    ports:
-      - "3306:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: mariadb
-      MYSQL_USER: mariadb
-      MYSQL_PASSWORD: mariadb
-      MYSQL_DATABASE: mariadb
-    command: --max-connections 500
-    healthcheck:
-      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
-      timeout: 30s
-      retries: 10
-    restart: unless-stopped
-    volumes:
-      - ./servers/yoahtl-creative/mariadb:/var/lib/mysql
-      - ./servers/yoahtl-creative/mariadb-provision:/docker-entrypoint-initdb.d
-
 secrets:
   forwarding_secret:
     file: forwarding_secret
+
+  # #######################################################
+  # # yoahtl-creative Profile
+  # yoahtl-creative:
+  #   hostname: yoahtl-creative
+  #   container_name: yoahtl-creative
+  #   profiles: ["yoahtl-creative"]
+  #   image: itzg/minecraft-server:java17
+  #   ports:
+  #     - "30066:30066"
+  #   environment:
+  #     UID: 1002 #Minecraft user
+  #     GID: 1003 #Minecraft group
+  #     TYPE: PAPER
+  #     VERSION: 1.18.2
+  #     MEMORY: 7168m
+  #     USE_AIKAR_FLAGS: true
+  #     EULA: "TRUE"
+  #     EXTRA_ARGS: '--universe ./worlds/'
+  #     #EXEC_DIRECTLY: true
+  #   tty: true
+  #   stdin_open: true
+  #   restart: unless-stopped
+  #   volumes:
+  #     - ./servers/yoahtl-creative:/data
+  #   depends_on:
+  #     - yoahtl-civdb
+  # yoahtl-civdb:
+  #   hostname: yoahtl-civdb
+  #   container_name: yoahtl-civdb
+  #   user: minecraft
+  #   profiles: ["yoahtl-creative"]
+  #   image: mariadb:10.7.1
+  #   ports:
+  #     - "3306:3306"
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: mariadb
+  #     MYSQL_USER: mariadb
+  #     MYSQL_PASSWORD: mariadb
+  #     MYSQL_DATABASE: mariadb
+  #   command: --max-connections 500
+  #   healthcheck:
+  #     test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+  #     timeout: 30s
+  #     retries: 10
+  #   restart: unless-stopped
+  #   volumes:
+  #     - ./servers/yoahtl-creative/mariadb:/var/lib/mysql
+  #     - ./servers/yoahtl-creative/mariadb-provision:/docker-entrypoint-initdb.d
