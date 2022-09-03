@@ -1,49 +1,11 @@
-# Ignore logs
-**/logs
-*.log
-*.log.gz
-# Ignore cache
-**/cache
-**/usercache.json
-# Ignore libraries
-**/libraries
-# Ignore version binaries
-**/versions
-# Ignore the contents of local - larger dirs like the Worlds and Schematics should be copied over another way
-local/**
-# Ignore the worlds, we'll copy that over another way
-**/world
-**/worlds
-# Ignore any generated databases
-servers/**/mariadb
-# Ignore schematics
-servers/**/schematics
-# Ignore console history, should be starting a new history for every deployment.
-*.console_history
 # Ignore the forwarding secret and future secrets
 *.secret
 *_secret
-
-
-# Ignore the plugins generated inside /hub and /proxy
-# these plugins folders are built from bindmounted volumes, sourced from plugins-common, defined in docker-compose.yml
-#hub/plugins
-#proxy/plugins
+# Ignore the contents of local - larger dirs like the Worlds, Schematics, and Databases should be copied over another way
+# This is also now the data dir for new servers, and this'll be ignored by default.
+local/**
 
 # Ignore the server-icon.png inside /servers, duplicated file, defined in docker-compose.yml
 #servers/**/server-icon.png
 # Ignore old project files and dirs with this suffix
 *.old
-
-# Ignore any generated forwarding.secret
-# UPDATE: I guess we HAVE to track the secret until we can implement docker secrets??????
-#**/forwarding.secret
-
-# Ignore the actual velocity jar inside /proxy or anywhere else, this is only for config geration and individual testing
-#velocity*.jar
-# Ignore the actual paper jar inside /hub or anywhere else, this will be downloaded on setup
-#paper*.jar
-# Ignore EVERY .jar archive. We can fetch those in the docker-compose now.
-#*.jar
-
-
