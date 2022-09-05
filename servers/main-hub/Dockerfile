@@ -2,9 +2,6 @@
 
 FROM itzg/minecraft-server:java17
 
-RUN useradd minecraft
-USER minecraft:minecraft
-
 # https://github.com/itzg/docker-minecraft-server/blob/master/README.md#versions
 ENV VERSION=latest
 
@@ -21,8 +18,6 @@ ENV REMOVE_OLD_MODS=TRUE
 COPY config /config
 ENV COPY_CONFIG_DEST=/data
 ENV SYNC_SKIP_NEWER_IN_DESTINATION=false
-# Really confusing, but paper configs (since 1.19) now need to go in their OWN config directory.
-RUN mkdir config && mv paper*.yml config
 
 # https://github.com/itzg/docker-minecraft-server#running-a-paper-server
 ENV TYPE=PAPER
@@ -33,3 +28,8 @@ ENV REPLACE_ENV_VARIABLES=TRUE
 ENV REPLACE_ENV_DURING_SYNC=TRUE
 
 ENV CFG_FORWARDING_SECRET_FILE=/run/secrets/forwarding_secret
+
+RUN useradd minecraft || echo "User already exists, skipping"
+RUN mkdir /data || echo "/data already exists, skipping"
+RUN chown -R 1002:1003 /data
+USER minecraft

@@ -5,7 +5,8 @@ services:
   #######################################################
   # hub Profile - The main Minecraft hub world. Includes a Velocity proxy configured for modern forwarding, and a void world running on Paper.
   main-proxy:
-    build: main-proxy
+    user: minecraft
+    build: servers/main-proxy
     hostname: main-proxy
     container_name: main-proxy
     profiles: ["hub"]
@@ -14,6 +15,8 @@ services:
     stdin_open: true
     environment:
       MEMORY: 512m
+      UID: 1002
+      GID: 1003
     secrets:
       - forwarding_secret
     links:
@@ -22,7 +25,8 @@ services:
       - "25565:25577"
 
   main-hub:
-    build: main-hub
+    user: minecraft
+    build: servers/main-hub
     hostname: main-hub
     container_name: main-hub
     profiles: ["hub"]
@@ -31,10 +35,12 @@ services:
     stdin_open: true
     environment:
       MEMORY: 1024m
+      UID: 1002
+      GID: 1003
     secrets:
       - forwarding_secret
     volumes:
-      - ./local/main-hub:/data
+      - ./local:/data
 
 secrets:
   forwarding_secret:
