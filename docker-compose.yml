@@ -1,23 +1,87 @@
-version: '3.8'
+version: "3.8"
 
 services:
+  router:
+    image: itzg/mc-router
+    # depends_on:
+    #   - forge
+    #   - vanilla
+    #environment:
+    # enable API
+    #API_BINDING: ":25564"
+    ports:
+      - 25565:25565
+      # bind the API port to only loopback to avoid external exposure
+      #- 127.0.0.1:25564:25564
+    command: --mapping=mc.tetral.solutions=velocity:25565,civfun.tetral.solutions=civfun:25565
 
-  # For now, we'll be using itzg's preconfigured bungeecord and minecraft server containers just to get everything running
-  # https://github.com/itzg/docker-minecraft-server/ 
-  # https://github.com/itzg/docker-bungeecord
-  # This SHOULD change in the future when someone has enough time to swap this out with something assembled from scratch with the orignal Paper and Velocity jars.
-  #
-  # ...actually, nah. This works great. :)
+  civfun:
+    container_name: civfun
+    image: itzg/minecraft-server:java19
+    restart: always
+    environment:
+      PACKWIZ_URL: "https://github.com/klaribot/CivFun-packwiz/blob/master/packwiz/pack.toml?raw=true"
+      EULA: "TRUE"
+      SERVER_NAME: "CivFun"
+      MOTD: "We're all here to have fun!"
+      VIEW_DISTANCE: 7
+      SIMULATION_DISTANCE: 7
+      MAX_PLAYERS: 40
+      # MAX_WORLD_SIZE: 10000
+      ANNOUNCE_PLAYER_ACHIEVEMENTS: "TRUE"
+      FORCE_GAMEMODE: "TRUE"
+      SPAWN_PROTECTION: 0
+      TZ: America/New_York
+      ENABLE_ROLLING_LOGS: true
+
+      # https://github.com/itzg/docker-minecraft-server#whitelist-players=
+      # WHITELIST_FILE: /extra/whitelist.json
+      ENABLE_WHITELIST: "TRUE"
+      ENFORCE_WHITELIST: "TRUE"
+
+      DIFFICULTY: hard
+
+      ONLINE_MODE: "TRUE"
+      OVERRIDE_OPS: "TRUE"
+
+      # ICON: https://i.kym-cdn.com/entries/icons/mobile/000/029/223/cover2.jpg
+      OVERRIDE_ICON: "TRUE"
+
+      # perf stuff
+      USE_SIMD_FLAGS: true
+      # https://github.com/etil2jz/etil-minecraft-flags
+      JVM_OPTS: "-Xms20G -Xmx20G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=40 -XX:G1MaxNewSizePercent=50 -XX:G1HeapRegionSize=16M -XX:G1ReservePercent=15 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=20 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -XX:-UseBiasedLocking -XX:UseAVX=3 -XX:+UseStringDeduplication -XX:+UseFastUnorderedTimeStamps -XX:+UseAES -XX:+UseAESIntrinsics -XX:UseSSE=4 -XX:+UseFMA -XX:AllocatePrefetchStyle=1 -XX:+UseLoopPredicate -XX:+RangeCheckElimination -XX:+EliminateLocks -XX:+DoEscapeAnalysis -XX:+UseCodeCacheFlushing -XX:+SegmentedCodeCache -XX:+UseFastJNIAccessors -XX:+OptimizeStringConcat -XX:+UseCompressedOops -XX:+UseThreadPriorities -XX:+OmitStackTraceInFastThrow -XX:+TrustFinalNonStaticFields -XX:ThreadPriorityPolicy=1 -XX:+UseInlineCaches -XX:+RewriteBytecodes -XX:+RewriteFrequentPairs -XX:+UseNUMA -XX:-DontCompileHugeMethods -XX:+UseFPUForSpilling -XX:+UseFastStosb -XX:+UseNewLongLShift -XX:+UseVectorCmov -XX:+UseXMMForArrayCopy -XX:+UseXmmI2D -XX:+UseXmmI2F -XX:+UseXmmLoadAndClearUpper -XX:+UseXmmRegToRegMoveAll -Dfile.encoding=UTF-8 -Xlog:async -Djava.security.egd=file:/dev/urandom --add-modules jdk.incubator.vector"
+      # USE_AIKAR_FLAGS: "TRUE"
+    volumes:
+      - ./servers/civfun:/data
+
+  civfun-backups:
+    image: itzg/mc-backup
+    restart: always
+    environment:
+      BACKUP_INTERVAL: "12h"
+      PAUSE_IF_NO_PLAYERS: "FALSE"
+      PRUNE_BACKUPS_DAYS: "7"
+    volumes:
+      # mount the same volume used by server, but read-only
+      - ./servers/civfun:/data:ro
+      # use a host attached directory so that it in turn can be backed up
+      # to external/cloud storage
+      - ./backups/civfun:/backups
+      # share network namespace with server to simplify rcon access
+    network_mode: "service:civfun"
+    depends_on:
+      - civfun
 
   #######################################################
   # hub Profile - The main Minecraft hub world. Includes a Velocity proxy configured for modern forwarding, and a void world running on Paper.
-  main-proxy:
+  velocity:
     hostname: main-proxy
     container_name: main-proxy
     profiles: ["hub"]
     image: itzg/bungeecord:java17
-    ports:
-      - "25565:25565"
+    # ports:
+    #   - "25565:25565"
     environment:
       UID: 1002 #Minecraft user
       GID: 1003 #Minecraft group
@@ -78,7 +142,7 @@ services:
       MEMORY: 7168m
       USE_AIKAR_FLAGS: true
       EULA: "TRUE"
-      EXTRA_ARGS: '--universe ./worlds/'
+      EXTRA_ARGS: "--universe ./worlds/"
       #EXEC_DIRECTLY: true
     tty: true
     stdin_open: true
@@ -102,7 +166,7 @@ services:
       MYSQL_DATABASE: mariadb
     command: --max-connections 500
     healthcheck:
-      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       timeout: 30s
       retries: 10
     restart: unless-stopped
